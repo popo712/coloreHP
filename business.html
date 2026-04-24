@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>企業様・団体様へ｜Colore カラーレ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fdf8f5;
+      --pink: #e8b4b8;
+      --pink-light: #f5dde0;
+      --pink-dark: #d4939a;
+      --lavender: #d4a8c7;
+      --lavender-light: #f0e4ed;
+      --gold: #c9a96e;
+      --gold-light: #e8d5b0;
+      --brown: #4a3728;
+      --brown-mid: #6e5244;
+      --brown-light: #8a6e65;
+      --white: #ffffff;
+      --gray-light: #f5f0ed;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Serif JP', serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.9;
+      font-size: 15px;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,248,245,0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+    }
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .header-logo span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      letter-spacing: 3px;
+      color: var(--gold);
+    }
+    .header-logo small {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--brown-light);
+      margin-top: 3px;
+    }
+    .header-back {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: var(--brown-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .header-back:hover { color: var(--brown); }
+
+    /* ── Hero ── */
+    .biz-hero {
+      width: 100%;
+      display: block;
+      line-height: 0;
+    }
+    .biz-hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* ── Hero lead text ── */
+    .biz-lead {
+      background: var(--white);
+      padding: 52px 24px;
+      text-align: center;
+    }
+    .biz-lead .en {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .biz-lead h1 {
+      font-size: clamp(20px, 4.5vw, 34px);
+      font-weight: 300;
+      letter-spacing: 3px;
+      line-height: 1.7;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+    .biz-lead .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(13px, 2.5vw, 16px);
+      letter-spacing: 2px;
+      color: var(--brown-mid);
+      margin-bottom: 28px;
+    }
+    .biz-lead p {
+      font-size: 14px;
+      color: var(--brown-light);
+      line-height: 2.2;
+      max-width: 520px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+    .biz-lead .fukuri {
+      display: inline-block;
+      margin-top: 20px;
+      background: var(--pink-light);
+      color: var(--brown-mid);
+      font-size: 13px;
+      letter-spacing: 2px;
+      padding: 8px 22px;
+      border-radius: 100px;
+    }
+
+    /* ── Section commons ── */
+    section { padding: 64px 20px; }
+    .section-inner { max-width: 760px; margin: 0 auto; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title .en {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .section-title h2 {
+      font-size: clamp(18px, 4vw, 24px);
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+    .deco-line {
+      width: 40px; height: 1px;
+      background: var(--gold);
+      margin: 14px auto 0;
+    }
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 auto 32px;
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      max-width: 80px;
+    }
+    .ornament span {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    /* ── Target ── */
+    .target-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .target-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 14px 22px;
+      font-size: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+    .target-item .t-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── Effects ── */
+    .effect-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 560px) {
+      .effect-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .effect-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+    .effect-item .check { color: var(--pink-dark); font-size: 16px; flex-shrink: 0; }
+    .effect-item p { font-size: 14px; line-height: 1.7; }
+    .effect-quote {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--brown-mid);
+      line-height: 2.2;
+      font-style: italic;
+      border-top: 1px solid var(--pink-light);
+      border-bottom: 1px solid var(--pink-light);
+      padding: 20px 0;
+    }
+
+    /* ── Programs ── */
+    .prog-block {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+    .prog-block-head {
+      background: linear-gradient(135deg, var(--pink-light) 0%, var(--lavender-light) 100%);
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+    .prog-block-head h3 {
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      color: var(--brown);
+    }
+    .prog-block-body {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .prog-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--brown-mid);
+    }
+    .prog-item::before {
+      content: '';
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── Format ── */
+    .format-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (min-width: 480px) {
+      .format-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .format-item {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--brown);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      line-height: 1.7;
+    }
+    .format-note {
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--brown-light);
+      margin-top: 16px;
+      line-height: 2;
+    }
+
+    /* ── Price ── */
+    .price-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 28px;
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-top: 3px solid var(--gold);
+    }
+    .price-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--pink-light);
+      font-size: 14px;
+      color: var(--brown-mid);
+      line-height: 1.8;
+    }
+    .price-item:last-of-type { border-bottom: none; }
+    .price-note {
+      font-size: 12px;
+      color: var(--brown-light);
+      margin-top: 16px;
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    /* ── Flow ── */
+    .flow-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .flow-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .flow-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .flow-num {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .flow-line {
+      width: 1px;
+      flex: 1;
+      min-height: 28px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      margin: 4px 0;
+    }
+    .flow-item:last-child .flow-line { display: none; }
+    .flow-body {
+      padding: 6px 0 28px;
+    }
+    .flow-body h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--brown);
+      margin-bottom: 3px;
+    }
+    .flow-body p {
+      font-size: 13px;
+      color: var(--brown-light);
+      line-height: 1.8;
+    }
+
+    /* ── Other ── */
+    .other-box {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      border: 1px solid rgba(201,169,110,0.25);
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 14px;
+      color: var(--brown-mid);
+      line-height: 2.2;
+    }
+
+    /* ── CTA ── */
+    .biz-cta {
+      background: linear-gradient(160deg, var(--lavender-light), var(--pink-light));
+      padding: 72px 20px;
+      text-align: center;
+    }
+    .biz-cta h2 {
+      font-size: clamp(18px, 4vw, 24px);
+      font-weight: 400;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .biz-cta .mail-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: var(--brown);
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
+      margin-bottom: 24px;
+      transition: opacity 0.2s;
+    }
+    .biz-cta .mail-link:hover { opacity: 0.7; }
+    .btn-line-biz {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #06C755;
+      color: white;
+      padding: 16px 44px;
+      border-radius: 100px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      font-family: 'Noto Serif JP', serif;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 24px rgba(6,199,85,0.3);
+      margin-top: 8px;
+    }
+    .btn-line-biz:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(6,199,85,0.4);
+    }
+    .btn-line-biz svg { width: 22px; height: 22px; fill: white; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--brown);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-logo">
+    <span>Colore</span>
+    <small>カラーレ</small>
+  </div>
+  <a href="index.html" class="header-back">← ホームに戻る</a>
+</header>
+
+<!-- Hero -->
+<div class="biz-hero">
+  <img src="15479AEF-0D7B-4240-9EF5-F0715C5B7797.PNG" alt="企業様向け研修・ワークショップ">
+</div>
+
+<!-- Lead text -->
+<div class="biz-lead">
+  <span class="en">For Business</span>
+  <h1>女性が輝く職場づくりを<br>サポートします</h1>
+  <p class="hero-sub">― 第一印象と自己肯定感から組織力を高める研修 ―</p>
+  <p>
+    百貨店・保険会社・接客業など、<br>
+    女性が活躍する現場では「印象」が成果を左右します。<br><br>
+    Coloreでは、顔タイプ理論・カラー理論をもとに、<br>
+    "似合う"を理論的に理解し、<br>
+    実践に落とし込む研修を行っております。
+  </p>
+  <span class="fukuri">✦ 福利厚生にもおすすめです</span>
+</div>
+
+<!-- このような企業様に -->
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">For Companies Like</span>
+      <h2>このような企業様に</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="target-grid">
+      <div class="target-item"><span class="t-dot"></span><span>女性営業職の印象力を高めたい</span></div>
+      <div class="target-item"><span class="t-dot"></span><span>接客スタッフの第一印象を底上げしたい</span></div>
+      <div class="target-item"><span class="t-dot"></span><span>女性社員の自己肯定感を向上させたい</span></div>
+      <div class="target-item"><span class="t-dot"></span><span>女性活躍推進の具体的施策を探している</span></div>
+      <div class="target-item"><span class="t-dot"></span><span>顧客様向け体験型イベントを実施したい</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 導入効果 -->
+<section style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">Effects</span>
+      <h2>導入効果</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="effect-grid">
+      <div class="effect-item"><span class="check">✔</span><p>第一印象の向上</p></div>
+      <div class="effect-item"><span class="check">✔</span><p>信頼構築力アップ</p></div>
+      <div class="effect-item"><span class="check">✔</span><p>商談・接客時の説得力向上</p></div>
+      <div class="effect-item"><span class="check">✔</span><p>社員の自己肯定感・モチベーション向上</p></div>
+      <div class="effect-item"><span class="check">✔</span><p>チーム内コミュニケーションの活性化</p></div>
+      <div class="effect-item"><span class="check">✔</span><p>集客力のあるお客様イベントとして</p></div>
+    </div>
+    <p class="effect-quote">
+      "外見を整える"だけでなく、<br>
+      自分に自信を持てる状態をつくることが目的です。
+    </p>
+  </div>
+</section>
+
+<!-- 提供プログラム -->
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">Programs</span>
+      <h2>提供プログラム</h2>
+      <div class="deco-line"></div>
+    </div>
+
+
+
+    <div class="prog-block">
+      <div class="prog-block-head">
+        <h3>■ 体験型ワークショップ研修（福利厚生・イベント）</h3>
+      </div>
+      <div class="prog-block-body">
+        <div class="prog-item">簡易パーソナルカラー診断</div>
+        <div class="prog-item">顔タイプ診断</div>
+        <div class="prog-item">アクセサリー製作</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 実施形態 -->
+<section style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">Format</span>
+      <h2>実施形態</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="format-grid">
+      <div class="format-item">社内研修</div>
+      <div class="format-item">百貨店<br>イベント</div>
+      <div class="format-item">顧客様向け<br>来店型企画</div>
+      <div class="format-item">女性活躍推進<br>プログラム</div>
+    </div>
+    <p class="format-note">内容は目的に合わせてカスタマイズいたします。</p>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">Price</span>
+      <h2>料金目安</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="price-card">
+      <div class="price-item">
+        体験型ワークショップ
+      </div>
+      <p class="price-note">※ 規模・内容によりご提案いたします。<br>まずはお気軽にお問い合わせください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ご依頼の流れ -->
+<section style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-title">
+      <span class="en">Flow</span>
+      <h2>ご依頼の流れ</h2>
+      <div class="deco-line"></div>
+    </div>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-left"><div class="flow-num">1</div><div class="flow-line"></div></div>
+        <div class="flow-body"><h3>お問い合わせ</h3><p>メールまたはLINEにてご連絡ください。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left"><div class="flow-num">2</div><div class="flow-line"></div></div>
+        <div class="flow-body"><h3>ヒアリング</h3><p>目的・人数・日程・ご要望などをお伺いします。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left"><div class="flow-num">3</div><div class="flow-line"></div></div>
+        <div class="flow-body"><h3>プログラムご提案</h3><p>ご要望に合わせた内容と料金をご提案いたします。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-left"><div class="flow-num">4</div><div class="flow-line"></div></div>
+        <div class="flow-body"><h3>実施</h3><p>ご契約後、日程を確定して開催いたします。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- その他 -->
+<section style="background:var(--white);">
+  <div class="section-inner">
+    <div class="ornament"><span>✦</span></div>
+    <div class="other-box">
+      その他、PTA講習会やイベントワークショップなども承ります。<br>
+      お気軽にお問い合わせください。
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="biz-cta">
+  <h2>お問い合わせはこちら</h2>
+  <p style="font-size:13px;color:var(--brown-light);margin-bottom:20px;line-height:2;">
+    ご質問・ご相談など、どうぞお気軽にご連絡ください。
+  </p>
+  <div style="margin-bottom:16px;">
+    <a href="mailto:colore.bijou@gmail.com" class="mail-link">
+      ✉ colore.bijou@gmail.com
+    </a>
+  </div>
+  <a href="https://lin.ee/YDGr5rX" class="btn-line-biz" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.952 12.518c0-4.011-4.022-7.273-8.964-7.273-4.943 0-8.964 3.262-8.964 7.273 0 3.595 3.188 6.606 7.495 7.177.292.063.689.193.789.443.091.227.06.583.029.813l-.128.768c-.039.227-.181.888.777.484.957-.404 5.164-3.042 7.047-5.208 1.3-1.426 1.919-2.877 1.919-4.477z"/></svg>
+    LINEでお問い合わせ
+  </a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Colore. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
