@@ -1543,6 +1543,160 @@
       box-shadow: 0 6px 18px rgba(212,147,154,0.45);
     }
 
+    /* ────────────────────────────────
+       RESERVATION
+    ──────────────────────────────── */
+    #reservation {
+      background: linear-gradient(160deg, var(--pink-light) 0%, var(--lavender-light) 100%);
+    }
+    .reservation-lead {
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--brown-mid);
+      line-height: 2.1;
+      margin-bottom: 36px;
+    }
+    .reservation-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .ws-card {
+      background: var(--white);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 32px rgba(212,147,154,0.18);
+    }
+    .ws-card-header {
+      background: linear-gradient(135deg, var(--pink-dark) 0%, var(--lavender) 100%);
+      padding: 22px 28px;
+      text-align: center;
+    }
+    .ws-date-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 6px;
+    }
+    .ws-date {
+      font-size: clamp(18px, 4.5vw, 24px);
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 2px;
+    }
+    .ws-details {
+      padding: 20px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-bottom: 1px solid var(--pink-light);
+    }
+    .ws-detail-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 13.5px;
+    }
+    .ws-detail-label {
+      color: var(--gold);
+      font-size: 11.5px;
+      letter-spacing: 1px;
+      min-width: 44px;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+    .ws-detail-value {
+      color: var(--brown);
+      flex: 1;
+      line-height: 1.8;
+    }
+    .ws-slots {
+      padding: 18px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ws-slots-title {
+      font-size: 11.5px;
+      letter-spacing: 2px;
+      color: var(--brown-light);
+      margin-bottom: 4px;
+    }
+    .ws-slot {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 14px 18px;
+      background: var(--cream);
+      border-radius: 12px;
+    }
+    .ws-slot.soldout-slot {
+      opacity: 0.6;
+    }
+    .ws-slot-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: var(--brown);
+      letter-spacing: 2px;
+      font-weight: 300;
+      min-width: 88px;
+    }
+    .ws-badge {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+    .ws-badge.badge-remaining {
+      background: #fff0f1;
+      color: var(--pink-dark);
+      border: 1px solid var(--pink);
+    }
+    .ws-badge.badge-soldout {
+      background: var(--gray-light);
+      color: var(--brown-light);
+      border: 1px solid rgba(74,55,40,0.12);
+    }
+    .btn-ws-reserve {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--pink-dark) 0%, var(--lavender) 100%);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 12.5px;
+      letter-spacing: 2px;
+      font-family: 'Noto Serif JP', serif;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(212,147,154,0.35);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .btn-ws-reserve:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(212,147,154,0.48);
+    }
+    .ws-empty {
+      text-align: center;
+      padding: 44px 24px;
+      font-size: 13.5px;
+      color: var(--brown-light);
+      background: var(--white);
+      border-radius: 16px;
+      line-height: 2.2;
+    }
+    .reservation-note {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--brown-light);
+      line-height: 2.1;
+    }
+
     #business { background: var(--lavender-light); }
     .business-card {
       background: var(--white);
@@ -1582,6 +1736,7 @@
     <li><a href="#steps"><span class="nav-en">Lesson</span><span class="nav-ja">レッスン</span></a></li>
     <li><a href="#gallery"><span class="nav-en">Gallery</span><span class="nav-ja">作品集</span></a></li>
     <li><a href="#schedule"><span class="nav-en">Schedule</span><span class="nav-ja">日程・料金</span></a></li>
+    <li><a href="#reservation"><span class="nav-en">Reserve</span><span class="nav-ja">ご予約</span></a></li>
     <li><a href="#access"><span class="nav-en">Access</span><span class="nav-ja">アクセス</span></a></li>
     <li><a href="#profile"><span class="nav-en">Profile</span><span class="nav-ja">講師</span></a></li>
     <li><a href="#voice"><span class="nav-en">Voice</span><span class="nav-ja">お客様の声</span></a></li>
@@ -1606,6 +1761,7 @@
   <a href="#steps"><span class="drawer-en">Lesson</span><span class="drawer-ja">レッスン</span></a>
   <a href="#gallery"><span class="drawer-en">Gallery</span><span class="drawer-ja">作品集</span></a>
   <a href="#schedule"><span class="drawer-en">Schedule</span><span class="drawer-ja">日程・料金</span></a>
+  <a href="#reservation"><span class="drawer-en">Reserve</span><span class="drawer-ja">コラボレッスン ご予約</span></a>
   <a href="#access"><span class="drawer-en">Access</span><span class="drawer-ja">アクセス</span></a>
   <a href="#profile"><span class="drawer-en">Profile</span><span class="drawer-ja">講師プロフィール</span></a>
   <a href="#voice"><span class="drawer-en">Voice</span><span class="drawer-ja">お客様の声</span></a>
@@ -1983,29 +2139,28 @@
       </div>
     </div>
 
-    <div class="calendar-wrap fade-in">
-      <div class="cal-header">
-        <button class="cal-nav" id="cal-prev">&#8249;</button>
-        <div class="cal-title" id="cal-title"></div>
-        <button class="cal-nav" id="cal-next">&#8250;</button>
-      </div>
-      <div class="cal-grid" id="cal-grid">
-        <div class="cal-day-label sun">日</div>
-        <div class="cal-day-label">月</div>
-        <div class="cal-day-label">火</div>
-        <div class="cal-day-label">水</div>
-        <div class="cal-day-label">木</div>
-        <div class="cal-day-label">金</div>
-        <div class="cal-day-label sat">土</div>
-      </div>
-      <div class="cal-legend">
-        <div class="dot"></div>
-        <span>レッスン開催日</span>
-      </div>
-    </div>
+  </div>
+</section>
 
-    <p style="text-align:center;font-size:12px;color:var(--brown-light);margin-top:20px;">
-      ※ 日程は変更になる場合があります。最新情報はLINEにてご確認ください。
+<!-- ══════════════ RESERVATION ══════════════ -->
+<section id="reservation">
+  <div class="section-inner">
+    <div class="section-title fade-in">
+      <span class="en">Reservation</span>
+      <h2>コラボレッスン　開催日程・ご予約</h2>
+      <div class="deco-line"></div>
+    </div>
+    <p class="reservation-lead fade-in">
+      月1〜2回開催のコラボワークショップです。<br>
+      お席に限りがございますので、お早めにご予約ください。
+    </p>
+    <div class="reservation-cards" id="reservation-cards">
+      <!-- JS で描画 -->
+    </div>
+    <p class="reservation-note fade-in">
+      ※ Googleフォームにてお申し込み後、自動返信メールをご確認ください。<br>
+      ※ キャンセル・ご変更は公式LINEよりご連絡ください。<br>
+      ※ 日程は変更になる場合があります。最新情報は公式LINEにてご案内します。
     </p>
   </div>
 </section>
@@ -2280,6 +2435,13 @@
 </footer>
 
 <script>
+  // ══════════════════════════════════════════════════════
+  //  コラボレッスン 開催スケジュール管理
+  //  ▼ スプレッドシートを更新すると自動でホームページに反映されます ▼
+  // ══════════════════════════════════════════════════════
+  const SCHEDULE_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQvFoSRAhyJYloaEQ4M3jNuLsXLCsxFf3YP3Rq2ojCyFWVWup6mg1nbY4eC8L6Pyhq6QsrzNz7yxcS_/pub?gid=811969790&single=true&output=csv';
+  // ══════════════════════════════════════════════════════
+
   // ── Hamburger menu ──
   const hamburger = document.getElementById('hamburger');
   const drawer = document.getElementById('nav-drawer');
@@ -2312,62 +2474,81 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ── Calendar ──
-  // レッスン日を追加・変更する場合はこの配列を編集してください
-  const lessonDates = [
-    '2025-05-21',
-    // 例: '2025-05-28', '2025-06-04',
-  ];
+  // ── Workshop reservation cards ──
+  (async function loadAndRenderWorkshopCards() {
+    const container = document.getElementById('reservation-cards');
+    if (!container) return;
 
-  let calYear = 2025;
-  let calMonth = 4; // 0-indexed → 4 = May
+    try {
+      const res = await fetch(SCHEDULE_CSV_URL);
+      const text = await res.text();
+      const rows = text.trim().split('\n');
 
-  function renderCalendar() {
-    const grid = document.getElementById('cal-grid');
-    const title = document.getElementById('cal-title');
+      // 列の順番: date, slot1_time, slot1_remaining, slot2_time, slot2_remaining, formUrl
+      const workshopSchedule = rows.slice(1)
+        .map(r => r.split(',').map(v => v.trim()))
+        .filter(r => r[0] && !r[0].startsWith('date'))
+        .map(r => ({
+          date:     r[0],
+          location: 'petit fleur',
+          fee:      '16,500円（税込）',
+          contents: 'パーソナルカラー簡易診断・顔パーツ診断・ビジューアクセサリー制作',
+          capacity: 2,
+          formUrl:  r[5],
+          slots: [
+            { time: r[1], remaining: parseInt(r[2]) || 0 },
+            { time: r[3], remaining: parseInt(r[4]) || 0 },
+          ].filter(s => s.time),
+        }));
 
-    // Keep header row
-    while (grid.children.length > 7) grid.removeChild(grid.lastChild);
+      if (workshopSchedule.length === 0) {
+        container.innerHTML = '<p class="ws-empty">現在開催予定のワークショップはございません。<br>最新情報は公式LINEにてご案内します。</p>';
+        return;
+      }
 
-    const monthNames = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
-    title.textContent = `${calYear}年 ${monthNames[calMonth]}`;
+      workshopSchedule.forEach(ws => {
+        const slotsHtml = ws.slots.map(slot => {
+          const isSoldOut = slot.remaining === 0;
+          const showBadge  = !isSoldOut && slot.remaining <= 2;
 
-    const firstDay = new Date(calYear, calMonth, 1).getDay();
-    const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+          const badgeHtml = isSoldOut
+            ? '<span class="ws-badge badge-soldout">満席</span>'
+            : showBadge
+              ? `<span class="ws-badge badge-remaining">残り${slot.remaining}席</span>`
+              : '';
 
-    // Empty cells before first day
-    for (let i = 0; i < firstDay; i++) {
-      const el = document.createElement('div');
-      el.className = 'cal-day empty';
-      grid.appendChild(el);
+          const btnHtml = isSoldOut
+            ? ''
+            : `<a href="${ws.formUrl}" target="_blank" rel="noopener" class="btn-ws-reserve">ご予約はこちら</a>`;
+
+          return `
+            <div class="ws-slot${isSoldOut ? ' soldout-slot' : ''}">
+              <span class="ws-slot-time">${slot.time}</span>
+              ${badgeHtml}
+              ${btnHtml}
+            </div>`;
+        }).join('');
+
+        const card = document.createElement('div');
+        card.className = 'ws-card fade-in';
+        card.innerHTML = `
+          <div class="ws-card-header">
+            <div class="ws-date-label">開催日</div>
+            <div class="ws-date">${ws.date}</div>
+          </div>
+          <div class="ws-slots">
+            <p class="ws-slots-title">時間帯をお選びください</p>
+            ${slotsHtml}
+          </div>`;
+
+        container.appendChild(card);
+        observer.observe(card);
+      });
+    } catch (e) {
+      container.innerHTML = '<p class="ws-empty">現在開催予定のワークショップはございません。<br>最新情報は公式LINEにてご案内します。</p>';
     }
+  })();
 
-    for (let d = 1; d <= daysInMonth; d++) {
-      const el = document.createElement('div');
-      const dow = new Date(calYear, calMonth, d).getDay();
-      const dateStr = `${calYear}-${String(calMonth + 1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
-      let cls = 'cal-day';
-      if (dow === 0) cls += ' sun';
-      if (dow === 6) cls += ' sat';
-      if (lessonDates.includes(dateStr)) cls += ' lesson';
-      el.className = cls;
-      el.textContent = d;
-      grid.appendChild(el);
-    }
-  }
-
-  document.getElementById('cal-prev').addEventListener('click', () => {
-    calMonth--;
-    if (calMonth < 0) { calMonth = 11; calYear--; }
-    renderCalendar();
-  });
-  document.getElementById('cal-next').addEventListener('click', () => {
-    calMonth++;
-    if (calMonth > 11) { calMonth = 0; calYear++; }
-    renderCalendar();
-  });
-
-  renderCalendar();
 </script>
 </body>
 </html>
