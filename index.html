@@ -2534,13 +2534,10 @@
       workshopSchedule.forEach(ws => {
         const slotsHtml = ws.slots.map(slot => {
           const isSoldOut = slot.remaining === 0;
-          const showBadge  = !isSoldOut && slot.remaining <= 2;
 
           const badgeHtml = isSoldOut
             ? '<span class="ws-badge badge-soldout">満席</span>'
-            : showBadge
-              ? `<span class="ws-badge badge-remaining">残り${slot.remaining}席</span>`
-              : '';
+            : '';
 
           const btnHtml = isSoldOut
             ? ''
